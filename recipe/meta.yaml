@@ -1,5 +1,5 @@
 {% set name = "mage-ai" %}
-{% set version = "0.4.13" %}
+{% set version = "0.4.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 493b2d39663dd2f5a926796fb73b610ef96730a602567888a8c429cd336687c1
+  sha256: 12513bf6fffafe63b2cdea15c2da1ae7005492e4702315d449218be583b6173f
 
 build:
   noarch: python
   skip_compile_pyc:
-    - "*/templates/*.py"          # These should not (and cannot) be compiled
+    - '*/templates/*.py'          # These should not (and cannot) be compiled
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
   entry_points:
