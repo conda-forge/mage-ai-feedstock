@@ -1,5 +1,5 @@
 {% set name = "mage-ai" %}
-{% set version = "0.7.72" %}
+{% set version = "0.7.73" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b45142767eeb1320bbcdb72299182e3cf9097cdbfc3cf8476c304b8c14630938
+  sha256: 40fe59dd279b4a09779d378544210049bfd4d71e750fff856ed407b5cd1bdf98
 
 build:
   noarch: python
