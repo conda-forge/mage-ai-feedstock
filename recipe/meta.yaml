@@ -1,5 +1,5 @@
 {% set name = "mage-ai" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.41" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4195a4b1b79ae684f23022465473dc2762e35ddaa02e6730aa78508f56955cc6
+  sha256: f973eb4c08e5e19e874ce9173252dc3d496c63247acbfb229aa498ddc868d9eb
 
 build:
   noarch: python
@@ -16,7 +16,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
   entry_points:
-    - mage = mage_ai.cli.main:main
+    - mage = mage_ai.cli.main:app
 
 requirements:
   host:
@@ -49,6 +49,7 @@ requirements:
     - six >=1.15.0
     - sqlalchemy >=1.4.20
     - tornado ==6.1
+    - typer ==0.7.0
 
 
 test:
