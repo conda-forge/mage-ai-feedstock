@@ -1,11 +1,11 @@
-About mage-ai
-=============
+About mage-ai-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mage-ai-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mage-ai/mage-ai
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mage-ai-feedstock/blob/main/LICENSE.txt)
 
 Summary: Mage is an open-source tool for building and running data pipelines that transform your data.
 
