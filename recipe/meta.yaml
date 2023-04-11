@@ -1,5 +1,5 @@
 {% set name = "mage-ai" %}
-{% set version = "0.8.41" %}
+{% set version = "0.8.43" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f973eb4c08e5e19e874ce9173252dc3d496c63247acbfb229aa498ddc868d9eb
+  sha256: a7202666154f8a52c53daaf10afa06766f00ef6d6bc5411402a4726924bc1b05
 
 build:
   noarch: python
   skip_compile_pyc:
     - '*/templates/*.py'          # These should not (and cannot) be compiled
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   entry_points:
     - mage = mage_ai.cli.main:app
 
