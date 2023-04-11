@@ -1,5 +1,5 @@
 {% set name = "mage-ai" %}
-{% set version = "0.8.41" %}
+{% set version = "0.8.43" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f973eb4c08e5e19e874ce9173252dc3d496c63247acbfb229aa498ddc868d9eb
+  sha256: a7202666154f8a52c53daaf10afa06766f00ef6d6bc5411402a4726924bc1b05
 
 build:
   noarch: python
@@ -24,32 +24,43 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - alembic >=1.7.5
     - Faker ==4.14.0
-    - Flask ~=1.1.2
+    - GitPython ==3.1.31
     - Jinja2 ~=3.0.3
-    - Werkzeug ~=2.0.0
+    - PyJWT ==2.6.0
+    - aiofiles ==22.1.0
+    - alembic >=1.7.5
+    - bcrypt
     - croniter ==1.3.7
-    - flask-cors ==3.0.10
+    - cryptography ==36.0.2
+    - dask >=2022.2.0
+    - datadog ==0.44.0
+    - freezegun ==1.2.2
+    - great-expectations ==0.15.50
+    - httpx ==0.23.1
+    - inflection ==0.5.1
     - ipykernel ==6.15.0
     - ipython
     - itsdangerous ~=1.1.0
     - joblib >=1.1.0
     - jupyter_client ==7.3.4
+    - jupyter_server ==1.23.5
     - jupyter-server-proxy ==3.2.1
-    - numpy ~=1.21.0
-    - pandas ~=1.3.0
-    - pyarrow ==6.0.0
+    - numpy >=1.21.0
+    - pandas >=1.3.0
+    - protobuf
+    - pyarrow ==10.0.1
     - python-dateutil ==2.8.2
     - pytz ==2022.1
     - pyyaml ~=6.0
-    - requests ==2.27.0
+    - requests ==2.27.1
     - scikit-learn >=1.0
     - simplejson
     - six >=1.15.0
-    - sqlalchemy >=1.4.20
+    - sqlalchemy >=1.4.20, <2.0.0
+    - terminado ==0.17.1
     - tornado ==6.1
-    - typer ==0.7.0
+    - typer[all] ==0.7.0
 
 
 test:
