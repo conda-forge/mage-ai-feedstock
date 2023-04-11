@@ -1,5 +1,5 @@
 {% set name = "mage-ai" %}
-{% set version = "0.8.43" %}
+{% set version = "0.8.44" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a7202666154f8a52c53daaf10afa06766f00ef6d6bc5411402a4726924bc1b05
+  sha256: aab6188607ed2cede4e9ab5e0a6a227b222968839f6a0592c3eb274fc40e9df2
 
 build:
   noarch: python
@@ -36,7 +36,6 @@ requirements:
     - dask >=2022.2.0
     - datadog ==0.44.0
     - freezegun ==1.2.2
-    - great-expectations ==0.15.50
     - httpx ==0.23.1
     - inflection ==0.5.1
     - ipykernel ==6.15.0
@@ -44,7 +43,6 @@ requirements:
     - itsdangerous ~=1.1.0
     - joblib >=1.1.0
     - jupyter_client ==7.3.4
-    - jupyter_server ==1.23.5
     - jupyter-server-proxy ==3.2.1
     - numpy >=1.21.0
     - pandas >=1.3.0
@@ -61,6 +59,8 @@ requirements:
     - terminado ==0.17.1
     - tornado ==6.1
     - typer[all] ==0.7.0
+  run_constrained:
+    - great-expectations ==0.15.50
 
 
 test:
