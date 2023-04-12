@@ -36,7 +36,6 @@ requirements:
     - dask >=2022.2.0
     - datadog ==0.44.0
     - freezegun ==1.2.2
-    - httpx ==0.23.1
     - inflection ==0.5.1
     - ipykernel ==6.15.0
     - ipython
@@ -58,9 +57,11 @@ requirements:
     - sqlalchemy >=1.4.20, <2.0.0
     - terminado ==0.17.1
     - tornado ==6.1
-    - typer[all] ==0.7.0
+    - typer ==0.7.0
   run_constrained:
     - great-expectations ==0.15.50
+    - httpx ==0.23.1
+    - jupyter_server ==1.23.5
 
 
 test:
