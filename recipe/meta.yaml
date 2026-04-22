@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: aab6188607ed2cede4e9ab5e0a6a227b222968839f6a0592c3eb274fc40e9df2
 
 build:
@@ -14,16 +14,16 @@ build:
   skip_compile_pyc:
     - '*/templates/*.py'          # These should not (and cannot) be compiled
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
     - mage = mage_ai.cli.main:app
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - Faker ==4.14.0
     - GitPython ==3.1.31
     - Jinja2 ~=3.0.3
@@ -65,6 +65,8 @@ requirements:
 
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - python -m unittest discover
   imports:
